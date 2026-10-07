@@ -54,6 +54,15 @@
       <symbol id="i-menu" viewBox="0 0 24 24">
         <path d="M4 6h16M4 12h16M4 18h16"></path>
       </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+        <path d="m22 7-10 7L2 7"></path>
+      </symbol>
     </defs>
   </svg>
 
@@ -70,21 +79,42 @@
       <!-- Navegación de Escritorio -->
       <nav class="header-nav" aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="#servicios" class="nav-link">Servicios</a></li>
-          <li><a href="#institucion" class="nav-link">Institución</a></li>
-          <li><a href="#sedes" class="nav-link">Sedes</a></li>
+          <!-- 1. Servicios con submenú desplegable -->
+          <li class="nav-item-dropdown">
+            <a href="#servicios" class="nav-link nav-link-dropdown" id="nav-dropdown-servicios" aria-haspopup="true" aria-expanded="false">
+              <span>Servicios</span>
+              <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="nav-dropdown-menu" aria-label="Submenú de servicios">
+              <li><a href="#servicio-resonancia" class="dropdown-link">Resonancia Magnética</a></li>
+              <li><a href="#servicio-hemodinamia" class="dropdown-link">Hemodinamia</a></li>
+              <li class="dropdown-divider-item"><a href="#servicios" class="dropdown-link dropdown-link-all">Todos los servicios <span class="arrow">→</span></a></li>
+            </ul>
+          </li>
+
+          <!-- 2. Nuestras sedes -->
+          <li><a href="#sedes" class="nav-link">Nuestras sedes</a></li>
+
+          <!-- 3. Profesionales -->
           <li><a href="#profesionales" class="nav-link">Profesionales</a></li>
-          <li><a href="#cobertura" class="nav-link">Cobertura</a></li>
+
+          <!-- 4. Obras sociales -->
+          <li><a href="#cobertura" class="nav-link">Obras sociales</a></li>
+
+          <!-- 5. Contacto -->
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
       </nav>
 
-      <!-- Acciones Destacadas -->
+      <!-- Acciones Destacadas a la derecha -->
       <div class="header-actions">
         <a href="https://v.bioboxcloud.com/login?institucion=medximg_mdz" class="btn btn-portal" target="_blank" rel="noopener noreferrer" aria-label="Acceder al portal Mis Estudios (abre en nueva pestaña)">
           <svg class="icon"><use href="#i-file"/></svg>
           <span>Mis estudios</span>
         </a>
-        <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20solicitar%20un%20turno." class="btn btn-turnos" target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno por WhatsApp">
+        <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20solicitar%20un%20turno." class="btn btn-turnos btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno por WhatsApp">
           <svg class="icon"><use href="#i-calendar"/></svg>
           <span>Solicitar turno</span>
         </a>
@@ -98,12 +128,38 @@
     <!-- Menú Desplegable Móvil -->
     <div class="mobile-menu-drawer" id="mobile-menu-drawer" aria-label="Menú móvil">
       <ul class="mobile-nav-links">
-        <li><a href="#servicios" class="mobile-nav-link">Servicios</a></li>
-        <li><a href="#institucion" class="mobile-nav-link">Institución</a></li>
-        <li><a href="#sedes" class="mobile-nav-link">Sedes</a></li>
+        <li class="mobile-nav-item">
+          <details class="mobile-nav-accordion">
+            <summary class="mobile-nav-summary">
+              <span>Servicios</span>
+              <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <ul class="mobile-subnav-links">
+              <li><a href="#servicio-resonancia" class="mobile-subnav-link">Resonancia Magnética</a></li>
+              <li><a href="#servicio-hemodinamia" class="mobile-subnav-link">Hemodinamia</a></li>
+              <li><a href="#servicios" class="mobile-subnav-link mobile-subnav-all">Todos los servicios →</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="#sedes" class="mobile-nav-link">Nuestras sedes</a></li>
         <li><a href="#profesionales" class="mobile-nav-link">Profesionales</a></li>
-        <li><a href="#cobertura" class="mobile-nav-link">Cobertura</a></li>
+        <li><a href="#cobertura" class="mobile-nav-link">Obras sociales</a></li>
+        <li><a href="#contacto" class="mobile-nav-link">Contacto</a></li>
       </ul>
+
+      <!-- Botones al final del menú móvil -->
+      <div class="mobile-menu-actions">
+        <a href="https://v.bioboxcloud.com/login?institucion=medximg_mdz" class="btn btn-portal" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#i-file"/></svg>
+          <span>Mis estudios</span>
+        </a>
+        <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20solicitar%20un%20turno." class="btn btn-turnos btn-primary" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#i-calendar"/></svg>
+          <span>Solicitar turno</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -124,9 +180,10 @@
           <div class="container slide-content-container">
             <div class="slide-content">
               <span class="section-tag light">MEDICINA POR IMÁGENES · MENDOZA</span>
-              <h1 class="slide-title">Tecnología de avanzada en diagnóstico médico.</h1>
+              <h1 class="slide-title">Resonancia Magnética con tecnología de avanzada.</h1>
+              <p class="slide-desc">Contamos con un resonador a la vanguardia tecnológica de Mendoza, junto con un equipo de profesionales que te acompaña durante tu estudio.</p>
               <div class="slide-actions">
-                <a href="https://wa.me/5492615117290" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20solicitar%20un%20turno%20de%20Resonancia%20Magnética." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <svg class="icon"><use href="#i-calendar"/></svg>
                   <span>Solicitar turno</span>
                 </a>
@@ -173,7 +230,7 @@
         <div class="services-grid">
 
           <!-- 1. Resonancia Magnética -->
-          <details class="service-item-clean" name="servicios">
+          <details class="service-item-clean" name="servicios" id="servicio-resonancia">
             <summary class="service-summary-clean">
               <div class="service-clean-icon" aria-hidden="true">
                 <svg class="icon"><use href="#i-scan"/></svg>
@@ -198,7 +255,7 @@
           </details>
 
           <!-- 2. Hemodinamia -->
-          <details class="service-item-clean" name="servicios">
+          <details class="service-item-clean" name="servicios" id="servicio-hemodinamia">
             <summary class="service-summary-clean">
               <div class="service-clean-icon" aria-hidden="true">
                 <svg class="icon"><use href="#i-health"/></svg>
@@ -423,6 +480,76 @@
           </details>
 
         </div>
+        
+        <!-- ====================================================================
+             BANNER PARA MÉDICOS DERIVANTES (INFORMACIÓN Y RESPALDO)
+             ==================================================================== -->
+        <aside class="referrers-card" aria-label="Información para médicos derivantes">
+          <div class="referrers-header-row">
+            <div class="referrers-header-text">
+              <span class="section-tag">PARA MÉDICOS DERIVANTES</span>
+              <h3 class="referrers-title"><span class="title-light">Información y respaldo</span><br><span class="title-dark">para cada diagnóstico.</span></h3>
+              <p class="referrers-subtitle">Acompañamos a médicos derivantes con tecnología de avanzada,<br>experiencia y criterio médico.</p>
+            </div>
+            <div class="referrers-header-action">
+              <a href="mailto:medicinaporimagenes@mpimagenes.com.ar?subject=Consulta%20Profesional%20-%20M%C3%A9dico%20Derivante" class="btn btn-primary" aria-label="Contacto para profesionales">
+                <svg class="icon"><use href="#i-mail"/></svg>
+                <span>Contacto para profesionales</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="referrers-grid">
+            <!-- 1. Tecnología de avanzada -->
+            <div class="referrers-feature-item">
+              <div class="referrers-icon-wrapper">
+                <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="13" cy="15" r="10" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(41, 190, 219, 0.08)"/>
+                  <circle cx="13" cy="15" r="5" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2"/>
+                  <circle cx="13" cy="15" r="2" fill="var(--cyan-accent)"/>
+                  <path d="M11 19.5h16a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H11" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M24 23.5v4.5M16 23.5v4.5" stroke="var(--cyan-accent)" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="referrers-feature-text">
+                <h4 class="referrers-feature-title">Tecnología de avanzada</h4>
+                <p class="referrers-feature-desc">Equipamiento de vanguardia para estudios de diagnóstico por imágenes.</p>
+              </div>
+            </div>
+
+            <!-- 2. Criterio médico -->
+            <div class="referrers-feature-item">
+              <div class="referrers-icon-wrapper">
+                <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 3H8a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V10l-7-7z" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(41, 190, 219, 0.08)"/>
+                  <path d="M20 3v7h7" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2"/>
+                  <path d="M16 14v6M13 17h6" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M10 23h12" stroke="var(--cyan-accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="referrers-feature-text">
+                <h4 class="referrers-feature-title">Criterio médico</h4>
+                <p class="referrers-feature-desc">Experiencia profesional para acompañar cada estudio y diagnóstico.</p>
+              </div>
+            </div>
+
+            <!-- 3. Canal para profesionales -->
+            <div class="referrers-feature-item">
+              <div class="referrers-icon-wrapper">
+                <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="6" width="24" height="19" rx="3.5" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(41, 190, 219, 0.08)"/>
+                  <path d="M4.5 7.5L16 16.5l11.5-9" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="16" cy="16.5" r="2" fill="var(--cyan-accent)"/>
+                  <path d="M9 20h4M19 20h4" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="referrers-feature-text">
+                <h4 class="referrers-feature-title">Canal para profesionales</h4>
+                <p class="referrers-feature-desc">Contacto directo entre médicos para solicitar estudios, consultar informes e intercambiar información.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -473,7 +600,7 @@
           <!-- Fotografía grande a la izquierda -->
           <div class="institution-media">
             <div class="institution-image-wrapper">
-              <img src="assets/institucion.webp" alt="Sala de espera y atención de Medicina por Imágenes en Mendoza" class="institution-img" width="600" height="480">
+              <img src="assets/profesionales-quirofano.png" alt="Dos profesionales médicos en quirófano de Medicina por Imágenes" class="institution-img" width="600" height="480">
             </div>
             <!-- Dato destacado con acento celeste -->
             <div class="institution-stat-card">
@@ -490,6 +617,7 @@
             <p>Hoy seguimos evolucionando con innovación, experiencia médica y atención humana como pilares. La capacitación y modernización constante nos permiten acompañarte en cada estudio.</p>
             
             <a href="#profesionales" class="btn btn-secondary" style="margin-top: 12px;">
+              <svg class="icon"><use href="#i-users"/></svg>
               <span>Conocé a nuestros profesionales</span>
             </a>
           </div>
@@ -502,9 +630,12 @@
          ======================================================================== -->
     <section class="locations-section section-padding" id="sedes">
       <div class="container">
-        <span class="section-tag">NUESTRAS SEDES</span>
-        <h2 class="section-title"><span class="title-light">Estamos cerca</span><br><span class="title-dark">para acompañarte mejor.</span></h2>
-        <p class="section-subtitle">Elegí una sede para conocer su ubicación y los servicios que brinda.</p>
+        <!-- Encabezado de sección -->
+        <div class="locations-header">
+          <span class="section-tag">NUESTRAS SEDES</span>
+          <h2 class="section-title"><span class="title-light">Estamos cerca</span><br><span class="title-dark">para acompañarte mejor.</span></h2>
+          <p class="section-subtitle">Elegí una sede para conocer su ubicación y los servicios que brinda.</p>
+        </div>
 
         <!-- Selector horizontal de sedes -->
         <div class="locations-nav-tabs" role="tablist" aria-label="Selector de sedes">
@@ -566,25 +697,28 @@
       <div class="container">
         <div class="coverage-box">
           <div class="coverage-header">
-            <div>
+            <div class="coverage-header-text">
               <span class="section-tag">OBRAS SOCIALES Y PREPAGAS</span>
               <h2 class="section-title"><span class="title-light">Tu cobertura,</span><br><span class="title-dark">más cerca.</span></h2>
-              <p class="section-subtitle" style="margin-bottom: 14px;">Trabajamos con obras sociales y prepagas. Consultá la cobertura y autorización correspondiente a tu estudio.</p>
+              <p class="section-subtitle">Trabajamos con obras sociales y prepagas. Consultá la cobertura y autorización correspondiente a tu estudio.</p>
+            </div>
+            <div class="coverage-actions-wrapper">
               <a href="https://mpimagenes.com.ar/obras-sociales/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-health"/></svg>
                 <span>Ver todas las coberturas</span>
               </a>
-            </div>
-            <div class="coverage-controls">
-              <button class="coverage-arrow-btn" id="coverage-prev" aria-label="Anterior obra social">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button class="coverage-arrow-btn" id="coverage-next" aria-label="Siguiente obra social">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+              <div class="coverage-controls">
+                <button class="coverage-arrow-btn" id="coverage-prev" aria-label="Anterior obra social">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="coverage-arrow-btn" id="coverage-next" aria-label="Siguiente obra social">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -620,69 +754,62 @@
          ======================================================================== -->
     <section class="staff-section section-padding" id="profesionales">
       <div class="container">
-        <div class="staff-header-block" style="margin-bottom: 40px;">
-          <span class="section-tag">NUESTROS PROFESIONALES</span>
-          <h2 class="section-title"><span class="title-light">Experiencia médica.</span><br><span class="title-dark">Atención cercana.</span></h2>
-          <p class="section-subtitle" style="margin-bottom: 14px;">Profesionales destacados de nuestro equipo en el área de diagnóstico vascular y por imágenes.</p>
-          <a href="https://mpimagenes.com.ar/profesionales/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-            <span>Conocer a todo el equipo</span>
-          </a>
+        <div class="staff-header-row">
+          <div class="staff-header-text">
+            <span class="section-tag">JEFES DE SERVICIO</span>
+            <h2 class="section-title"><span class="title-light">Experiencia médica.</span><br><span class="title-dark">Referentes en cada especialidad.</span></h2>
+            <p class="section-subtitle">Conocé a los profesionales que lideran nuestros servicios.</p>
+          </div>
+          <div class="staff-header-action">
+            <a href="https://mpimagenes.com.ar/profesionales/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg class="icon"><use href="#i-users"/></svg>
+              <span>Conocé a nuestros profesionales</span>
+            </a>
+          </div>
         </div>
 
         <div class="staff-grid">
-          <!-- 1. Dra. Chaves María Eva -->
+          <!-- 1. Dr. Cuesta Carlos -->
           <article class="staff-card">
             <div class="staff-photo-wrapper">
-              <img src="assets/doctor-ejemplo.jpg" alt="Dra. Chaves María Eva" class="staff-photo" width="320" height="260" loading="lazy">
+              <img src="assets/male-doctor.jpg" alt="Dr. Cuesta Carlos" class="staff-photo" width="320" height="260" loading="lazy">
             </div>
             <div class="staff-card-content">
-              <h3 class="staff-name">Dra. Chaves María Eva</h3>
-              <p class="staff-specialty">Eco Doppler Color</p>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Eco%20Doppler%20Color%20con%20la%20Dra.%20Chaves%20Mar%C3%ADa%20Eva." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <span>Consultar turno</span>
-              </a>
+              <h3 class="staff-name">Dr. Cuesta Carlos</h3>
+              <p class="staff-role">Jefe de residentes</p>
             </div>
           </article>
 
-          <!-- 2. Dra. Cherubini Sonia -->
+          <!-- 2. Dr. Cuesta Carlos -->
           <article class="staff-card">
             <div class="staff-photo-wrapper">
-              <img src="assets/doctor-ejemplo.jpg" alt="Dra. Cherubini Sonia" class="staff-photo" width="320" height="260" loading="lazy">
+              <img src="assets/male-doctor.jpg" alt="Dr. Cuesta Carlos" class="staff-photo" width="320" height="260" loading="lazy">
             </div>
             <div class="staff-card-content">
-              <h3 class="staff-name">Dra. Cherubini Sonia</h3>
-              <p class="staff-specialty">Eco Doppler Color</p>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Eco%20Doppler%20Color%20con%20la%20Dra.%20Cherubini%20Sonia." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <span>Consultar turno</span>
-              </a>
+              <h3 class="staff-name">Dr. Cuesta Carlos</h3>
+              <p class="staff-role">Jefe de residentes</p>
             </div>
           </article>
 
-          <!-- 3. Dr. Di Marco Yoel -->
+          <!-- 3. Dr. Cuesta Carlos -->
           <article class="staff-card">
             <div class="staff-photo-wrapper">
-              <img src="assets/doctor-ejemplo.jpg" alt="Dr. Di Marco Yoel" class="staff-photo" width="320" height="260" loading="lazy">
+              <img src="assets/male-doctor.jpg" alt="Dr. Cuesta Carlos" class="staff-photo" width="320" height="260" loading="lazy">
             </div>
             <div class="staff-card-content">
-              <h3 class="staff-name">Dr. Di Marco Yoel</h3>
-              <p class="staff-specialty">Eco Doppler Color</p>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Eco%20Doppler%20Color%20con%20el%20Dr.%20Di%20Marco%20Yoel." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <span>Consultar turno</span>
-              </a>
+              <h3 class="staff-name">Dr. Cuesta Carlos</h3>
+              <p class="staff-role">Jefe de residentes</p>
             </div>
           </article>
 
           <!-- 4. Dr. Cuesta Carlos -->
           <article class="staff-card">
             <div class="staff-photo-wrapper">
-              <img src="assets/doctor-ejemplo.jpg" alt="Dr. Cuesta Carlos" class="staff-photo" width="320" height="260" loading="lazy">
+              <img src="assets/male-doctor.jpg" alt="Dr. Cuesta Carlos" class="staff-photo" width="320" height="260" loading="lazy">
             </div>
             <div class="staff-card-content">
               <h3 class="staff-name">Dr. Cuesta Carlos</h3>
-              <p class="staff-specialty">Eco Doppler Color</p>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Eco%20Doppler%20Color%20con%20el%20Dr.%20Cuesta%20Carlos." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <span>Consultar turno</span>
-              </a>
+              <p class="staff-role">Jefe de residentes</p>
             </div>
           </article>
         </div>
@@ -742,7 +869,7 @@
                 <span class="faq-toggle-icon" aria-hidden="true"></span>
               </summary>
               <div class="faq-answer">
-                <p>Ingresá al portal <a href="https://v.bioboxcloud.com/login?institucion=medximg_mdz" target="_blank" rel="noopener noreferrer">“Mis estudios”</a> con los datos de acceso que te haya brindado la institución. Si necesitás asistencia, contactanos.</p>
+                <p>Ingresá al portal <a href="https://v.bioboxcloud.com/login?institucion=medximg_mdz" target="_blank" rel="noopener noreferrer">“Mis estudios”</a> con los datos de acceso que te haya brindado la institución. Si necesitás asistencia, escribinos por WhatsApp.</p>
               </div>
             </details>
 
@@ -773,14 +900,43 @@
     </section>
 
     <!-- ========================================================================
-         11. CONTACTO / CIERRE (BANNER AZUL PROFUNDO)
+         11. GALERÍA DE INSTALACIONES (FORMAS GEOMÉTRICAS)
+         ======================================================================== -->
+    <section class="gallery-section" id="galeria" aria-label="Galería de instalaciones y tecnología">
+      <div class="container">
+        <div class="gallery-shapes-grid">
+          <!-- 1. Cápsula / Stadium -->
+          <div class="gallery-shape-card shape-pill">
+            <img src="assets/gallery-1-opt.jpg" alt="Instalaciones de Medicina por Imágenes" class="gallery-shape-img" loading="lazy" width="600" height="800">
+          </div>
+
+          <!-- 2. Arco -->
+          <div class="gallery-shape-card shape-arch">
+            <img src="assets/gallery-2-opt.jpg" alt="Equipamiento de diagnóstico médico" class="gallery-shape-img" loading="lazy" width="600" height="800">
+          </div>
+
+          <!-- 3. Esquina redondeada -->
+          <div class="gallery-shape-card shape-corner">
+            <img src="assets/gallery-3-opt.jpg" alt="Atención médica y tecnología" class="gallery-shape-img" loading="lazy" width="600" height="800">
+          </div>
+
+          <!-- 4. Arco con tinte cyan -->
+          <div class="gallery-shape-card shape-arch-tint">
+            <img src="assets/gallery-4-opt.jpg" alt="Equipo profesional de Medicina por Imágenes" class="gallery-shape-img" loading="lazy" width="600" height="800">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         12. CONTACTO / CIERRE (BANNER AZUL PROFUNDO)
          ======================================================================== -->
     <section class="closing-cta-section" id="contacto" aria-label="Contacto para turnos">
       <div class="closing-bg-glow" aria-hidden="true"></div>
       <div class="container">
         <div class="closing-cta-card">
           <span class="section-tag light">TU SALUD, NUESTRA MISIÓN</span>
-          <h2>El primer paso es simple. Estamos para acompañarte.</h2>
+          <h2>El primer paso es simple.<br>Estamos para acompañarte.</h2>
           <p>Consultá por tu estudio, cobertura o sede. Nuestro equipo te orientará para solicitar tu turno.</p>
           <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20estudio,%20cobertura%20o%20sede." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
             <svg class="icon"><use href="#i-chat"/></svg>

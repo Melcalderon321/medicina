@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileToggle.addEventListener('click', () => toggleMenu());
 
-    mobileNavLinks.forEach(link => {
+    // Cerrar al hacer clic en cualquier enlace del menú móvil
+    mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => toggleMenu(false));
     });
 
@@ -39,6 +40,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Desplegable de Servicios en Desktop (Soporte click/touch)
+  const dropdownItem = document.querySelector('.nav-item-dropdown');
+  const dropdownToggle = document.getElementById('nav-dropdown-servicios');
+  if (dropdownItem && dropdownToggle) {
+    dropdownToggle.addEventListener('click', (e) => {
+      const isExpanded = dropdownItem.classList.contains('open');
+      dropdownToggle.setAttribute('aria-expanded', String(!isExpanded));
+      dropdownItem.classList.toggle('open', !isExpanded);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdownItem.contains(e.target)) {
+        dropdownItem.classList.remove('open');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Apertura automática de acordeón de servicio al hacer clic en submenú
+  const bindServiceAccordionTrigger = (href, serviceId) => {
+    document.querySelectorAll(`a[href="${href}"]`).forEach(link => {
+      link.addEventListener('click', () => {
+        const targetService = document.getElementById(serviceId);
+        if (targetService) {
+          targetService.open = true;
+        }
+      });
+    });
+  };
+  bindServiceAccordionTrigger('#servicio-resonancia', 'servicio-resonancia');
+  bindServiceAccordionTrigger('#servicio-hemodinamia', 'servicio-hemodinamia');
+
   /* ==========================================================================
      2. Slider Principal (Portada)
      ========================================================================== */
@@ -46,11 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 0,
       eyebrow: 'MEDICINA POR IMÁGENES · MENDOZA',
-      title: 'Tecnología de avanzada en diagnóstico médico.',
-      desc: 'Experiencia médica y tecnología al servicio de tu salud.',
+      title: 'Resonancia Magnética con tecnología de avanzada.',
+      desc: 'Contamos con un resonador a la vanguardia tecnológica de Mendoza, junto con un equipo de profesionales que te acompaña durante tu estudio.',
       btnTurnoText: 'Solicitar turno',
       btnTurnoMsg: 'Hola, quisiera solicitar un turno de Resonancia Magnética.',
-      btnSecText: 'Conocer el servicio',
+      btnSecText: 'Conocé el servicio',
       btnSecLink: '#servicios',
       serviceQueryId: 0,
       location: 'Resonancia magnética · Sede Mitre 775, Ciudad de Mendoza',
@@ -66,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Cardiología intervencionista, electrofisiología y neurointervencionismo, con tecnología angiográfica y criterio médico.',
       btnTurnoText: 'Consultar por Hemodinamia',
       btnTurnoMsg: 'Hola, quisiera consultar por el servicio de Hemodinamia.',
-      btnSecText: 'Conocer el servicio',
+      btnSecText: 'Conocé el servicio',
       btnSecLink: '#servicios',
       serviceQueryId: 1,
       location: 'Hospital Privado de Mendoza · Santa Isabel de Hungría',
@@ -82,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Conocé nuestra sede de Mitre 775 y consultá por los servicios disponibles.',
       btnTurnoText: 'Solicitar turno',
       btnTurnoMsg: 'Hola, quisiera consultar por un turno en Sede Mitre.',
-      btnSecText: 'Conocer la sede',
+      btnSecText: 'Conocé la sede',
       btnSecLink: '#sedes',
       serviceQueryId: null,
       location: 'Mitre 775 · Ciudad de Mendoza',
