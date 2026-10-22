@@ -1711,30 +1711,6 @@ p {
   flex-wrap: wrap;
 }
 
-.coverage-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.coverage-arrow-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-subtle);
-}
-
-.coverage-arrow-btn:hover {
-  background: var(--blue-primary);
-  color: var(--white);
-  border-color: var(--blue-primary);
-}
 
 .coverage-viewport {
   overflow: hidden;

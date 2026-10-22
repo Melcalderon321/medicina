@@ -518,8 +518,6 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const coverageTrack = document.getElementById('coverage-track');
   const coverageViewport = document.querySelector('.coverage-viewport');
-  const coveragePrevBtn = document.getElementById('coverage-prev');
-  const coverageNextBtn = document.getElementById('coverage-next');
   let coverageCurrentIndex = 0;
 
   if (coverageTrack && coverageViewport) {
@@ -539,9 +537,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const translateX = coverageCurrentIndex * itemWidth;
       coverageTrack.style.transform = `translateX(-${translateX}px)`;
     };
-
-    if (coveragePrevBtn) coveragePrevBtn.addEventListener('click', () => updateCoveragePosition(-1));
-    if (coverageNextBtn) coverageNextBtn.addEventListener('click', () => updateCoveragePosition(1));
 
     window.addEventListener('resize', () => updateCoveragePosition(0));
 
