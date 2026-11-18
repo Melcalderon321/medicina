@@ -179,9 +179,9 @@
           </div>
           <div class="container slide-content-container">
             <div class="slide-content">
-              <span class="section-tag light">MEDICINA POR IMÁGENES · MENDOZA</span>
-              <h1 class="slide-title">Resonancia Magnética con tecnología de avanzada.</h1>
-              <p class="slide-desc">Contamos con un resonador a la vanguardia tecnológica de Mendoza, junto con un equipo de profesionales que te acompaña durante tu estudio.</p>
+              <span class="section-tag light">PRECISIÓN DIAGNÓSTICA</span>
+              <h1 class="slide-title">Resonancia Magnética con precisión tecnológica y respaldo profesional.</h1>
+              <p class="slide-desc">Nuestro servicio combina un resonador de alta tecnología con un equipo de profesionales especializados y técnicos capacitados para garantizar estudios de calidad y aportar precisión al diagnóstico.</p>
               <div class="slide-actions">
                 <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20solicitar%20un%20turno%20de%20Resonancia%20Magnética." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <svg class="icon"><use href="#i-calendar"/></svg>
@@ -226,330 +226,173 @@
           <p class="section-subtitle">Más de 20 años de experiencia en diagnóstico por imágenes en Mendoza, con tecnología de avanzada y atención médica cercana.</p>
         </div>
 
-        <!-- Grilla de 2 columnas con diseño limpio, ícono de especialidad y CTA único de texto -->
-        <div class="services-grid">
+        <!-- Grilla de tarjetas de servicios: cada tarjeta abre el detalle en un modal -->
+        <div class="services-cards">
 
           <!-- 1. Resonancia Magnética -->
-          <details class="service-item-clean" name="servicios" id="servicio-resonancia">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-scan"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Resonancia Magnética</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Tecnología de avanzada al servicio del diagnóstico médico.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Servicio de resonancia magnética en nuestra sede de Mitre 775, Ciudad de Mendoza. Consultá por tu estudio y su preparación al solicitar el turno.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>Mitre 775</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Resonancia%20Magn%C3%A9tica." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-resonancia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/resonancia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Resonancia Magnética</h3>
+            <p class="service-card-text">Tecnología de avanzada al servicio del diagnóstico médico.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">Mitre 775</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="0" aria-label="Ver detalle de Resonancia Magnética">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 2. Hemodinamia -->
-          <details class="service-item-clean" name="servicios" id="servicio-hemodinamia">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-health"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Hemodinamia</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Experiencia médica y tecnología para la atención cardiovascular.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Cardiología intervencionista, electrofisiología y neurointervencionismo, con tecnología angiográfica y criterio médico. Guardia pasiva.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>Hospital Privado de Mendoza · Hospital Santa Isabel de Hungría</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20el%20servicio%20de%20Hemodinamia." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-hemodinamia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/hemodinamia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Hemodinamia</h3>
+            <span class="service-card-badge">Guardia pasiva</span>
+            <p class="service-card-text">Experiencia médica y tecnología para la atención cardiovascular.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">Av. Colón 350/352</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="1" aria-label="Ver detalle de Hemodinamia">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 3. Tomografía -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-scan"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Tomografía</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Estudios por imágenes con acompañamiento profesional.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Estudios tomográficos de alta resolución con supervisión y criterio médico. Guardia activa 24 hs. Consultá la preparación y cobertura correspondiente.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>Clínica Santa María · Av. Colón 350</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Tomograf%C3%ADa." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-tomografia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/tomografia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Tomografía</h3>
+            <span class="service-card-badge">Guardia activa 24 hs.</span>
+            <p class="service-card-text">Estudios por imágenes con acompañamiento profesional.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">Clínica Santa María · Av. Colón 350</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="2" aria-label="Ver detalle de Tomografía">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 4. Ecografía y Eco Doppler -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-health"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Ecografía y Eco Doppler</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Evaluación por imágenes y atención médica cercana.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Estudios ecográficos y mapeo vascular Doppler. Consultá por disponibilidad, requisitos y preparación antes de tu turno.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>9 de Julio 716 · Av. Colón 350</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Eco%20Doppler%20Color." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-ecografia-doppler">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/ecografia-doppler.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Ecografía y Eco Doppler</h3>
+            <p class="service-card-text">Evaluación por imágenes y atención médica cercana.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">9 de Julio 716 · Av. Colón 350</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="3" aria-label="Ver detalle de Ecografía y Eco Doppler">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 5. Radiología Digital -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-scan"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Radiología Digital</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Servicio de diagnóstico radiológico con tecnología digital.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Radiología digital de alta resolución, directa y contrastada. Consultá requisitos y orden médica al solicitar el turno.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>9 de Julio 716 · Av. Colón 350</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Radiolog%C3%ADa%20Digital." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-radiologia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/radiologia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Radiología Digital</h3>
+            <p class="service-card-text">Servicio de diagnóstico radiológico con tecnología digital.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">9 de Julio 716 · Av. Colón 350</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="4" aria-label="Ver detalle de Radiología Digital">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 6. Ecografía -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-scan"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Ecografía</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Estudios ecográficos integrales con criterio médico.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Diagnóstico ecográfico general y especializado con atención médica cercana y equipamiento moderno.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>9 de Julio 716</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Ecograf%C3%ADa." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-ecografia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/ecografia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Ecografía</h3>
+            <p class="service-card-text">Estudios ecográficos integrales con criterio médico.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">9 de Julio 716</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="5" aria-label="Ver detalle de Ecografía">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 7. Punciones Guiadas por Ecografía -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-health"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Punciones Guiadas por Ecografía</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Procedimientos guiados por ecografía según indicación médica.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Punciones tiroideas, prostáticas y mamarias guiadas con precisión ecográfica. Coordiná los requisitos previos con nuestro equipo.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>9 de Julio 716</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Punciones%20Guiadas%20por%20Ecograf%C3%ADa." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-puncion-ecografia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/puncion-ecografia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Punciones Guiadas por Ecografía</h3>
+            <p class="service-card-text">Procedimientos guiados por ecografía según indicación médica.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">9 de Julio 716</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="6" aria-label="Ver detalle de Punciones Guiadas por Ecografía">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 8. Ecocardiografía -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-health"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Ecocardiografía</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Estudios ecocardiográficos. Consultá turnos y requisitos.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Evaluación ecocardiográfica de la estructura y dinámica cardiovascular con tecnología de alta precisión.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>9 de Julio 716</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Ecocardiograf%C3%ADa." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-ecocardiografia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/ecocardiografia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Ecocardiografía</h3>
+            <p class="service-card-text">Estudios ecocardiográficos. Consultá turnos y requisitos.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">9 de Julio 716</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="7" aria-label="Ver detalle de Ecocardiografía">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 9. Punciones Biopsia Guiada por Tomografía -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-scan"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Punciones Biopsia Guiada por Tomografía</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Procedimientos guiados por tomografía según la orden médica.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Procedimientos intervencionistas de alta precisión anatómica guiados por tomografía según la derivación de tu médico tratante.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>Av. Colón 350</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Punciones%20Biopsia%20Guiada%20por%20Tomograf%C3%ADa." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-puncion-tomografia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/puncion-tomografia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Punciones Biopsia Guiada por Tomografía</h3>
+            <p class="service-card-text">Procedimientos guiados por tomografía según la orden médica.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">Av. Colón 350</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="8" aria-label="Ver detalle de Punciones Biopsia Guiada por Tomografía">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
           <!-- 10. Mamografía Digital -->
-          <details class="service-item-clean" name="servicios">
-            <summary class="service-summary-clean">
-              <div class="service-clean-icon" aria-hidden="true">
-                <svg class="icon"><use href="#i-scan"/></svg>
-              </div>
-              <div class="service-clean-header">
-                <h3 class="service-clean-title">Mamografía Digital</h3>
-                <span class="service-toggle-sign" aria-hidden="true"></span>
-              </div>
-              <p class="service-clean-short">Estudios de diagnóstico mamario. Consultá cobertura y disponibilidad.</p>
-            </summary>
-            <div class="service-clean-body">
-              <p class="service-clean-detail">Estudios de diagnóstico y control mamario con tecnología digital directa. Consultá cobertura y requisitos al solicitar tu turno.</p>
-              <div class="service-clean-location">
-                <svg class="icon"><use href="#i-pin"/></svg>
-                <span>Mitre 775 · 9 de Julio 716</span>
-              </div>
-              <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20turno%20de%20Mamograf%C3%ADa%20Digital." class="service-clean-cta" target="_blank" rel="noopener noreferrer">
-                <span>Ver estudios de esta especialidad</span>
-                <span class="arrow">↗</span>
-              </a>
+          <article class="service-card" id="servicio-mamografia">
+            <div class="service-card-icon" aria-hidden="true">
+              <img src="assets/iconos-servicios/mamografia.png" alt="" width="62" height="62" loading="lazy">
             </div>
-          </details>
+            <h3 class="service-card-title">Mamografía Digital</h3>
+            <p class="service-card-text">Estudios de diagnóstico mamario. Consultá cobertura y disponibilidad.</p>
+            <div class="service-card-footer">
+              <span class="service-card-pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="service-card-location">Mitre 775 · 9 de Julio 716</span>
+            </div>
+            <button type="button" class="service-card-trigger" data-service-detail="9" aria-label="Ver detalle de Mamografía Digital">
+              <span class="service-card-more" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline></svg></span>
+            </button>
+          </article>
 
         </div>
         
-        <!-- ====================================================================
-             BANNER PARA MÉDICOS DERIVANTES (INFORMACIÓN Y RESPALDO)
-             ==================================================================== -->
-        <aside class="referrers-card" aria-label="Información para médicos derivantes">
-          <div class="referrers-header-row">
-            <div class="referrers-header-text">
-              <span class="section-tag">PARA MÉDICOS DERIVANTES</span>
-              <h3 class="referrers-title"><span class="title-light">Información y respaldo</span><br><span class="title-dark">para cada diagnóstico.</span></h3>
-              <p class="referrers-subtitle">Acompañamos a médicos derivantes con tecnología de avanzada,<br>experiencia y criterio médico.</p>
-            </div>
-            <div class="referrers-header-action">
-              <a href="mailto:medicinaporimagenes@mpimagenes.com.ar?subject=Consulta%20Profesional%20-%20M%C3%A9dico%20Derivante" class="btn btn-primary" aria-label="Contacto para profesionales">
-                <svg class="icon"><use href="#i-mail"/></svg>
-                <span>Contacto para profesionales</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="referrers-grid">
-            <!-- 1. Tecnología de avanzada -->
-            <div class="referrers-feature-item">
-              <div class="referrers-icon-wrapper">
-                <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="13" cy="15" r="10" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(41, 190, 219, 0.08)"/>
-                  <circle cx="13" cy="15" r="5" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2"/>
-                  <circle cx="13" cy="15" r="2" fill="var(--cyan-accent)"/>
-                  <path d="M11 19.5h16a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H11" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M24 23.5v4.5M16 23.5v4.5" stroke="var(--cyan-accent)" stroke-width="2"/>
-                </svg>
-              </div>
-              <div class="referrers-feature-text">
-                <h4 class="referrers-feature-title">Tecnología de avanzada</h4>
-                <p class="referrers-feature-desc">Equipamiento de vanguardia para estudios de diagnóstico por imágenes.</p>
-              </div>
-            </div>
-
-            <!-- 2. Criterio médico -->
-            <div class="referrers-feature-item">
-              <div class="referrers-icon-wrapper">
-                <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M20 3H8a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V10l-7-7z" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(41, 190, 219, 0.08)"/>
-                  <path d="M20 3v7h7" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2"/>
-                  <path d="M16 14v6M13 17h6" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2.2" stroke-linecap="round"/>
-                  <path d="M10 23h12" stroke="var(--cyan-accent)" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="referrers-feature-text">
-                <h4 class="referrers-feature-title">Criterio médico</h4>
-                <p class="referrers-feature-desc">Experiencia profesional para acompañar cada estudio y diagnóstico.</p>
-              </div>
-            </div>
-
-            <!-- 3. Canal para profesionales -->
-            <div class="referrers-feature-item">
-              <div class="referrers-icon-wrapper">
-                <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="4" y="6" width="24" height="19" rx="3.5" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(41, 190, 219, 0.08)"/>
-                  <path d="M4.5 7.5L16 16.5l11.5-9" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="16" cy="16.5" r="2" fill="var(--cyan-accent)"/>
-                  <path d="M9 20h4M19 20h4" stroke="var(--blue-btn-icon, #2050B8)" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="referrers-feature-text">
-                <h4 class="referrers-feature-title">Canal para profesionales</h4>
-                <p class="referrers-feature-desc">Contacto directo entre médicos para solicitar estudios, consultar informes e intercambiar información.</p>
-              </div>
-            </div>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -590,6 +433,53 @@
         </div>
       </div>
     </dialog>
+
+    <!-- ========================================================================
+         7. OBRAS SOCIALES Y PREPAGAS (CARRUSEL)
+         ======================================================================== -->
+    <section class="coverage-section section-padding" id="cobertura">
+      <div class="container">
+        <div class="coverage-box">
+          <div class="coverage-header">
+            <div class="coverage-header-text">
+              <span class="section-tag">OBRAS SOCIALES Y PREPAGAS</span>
+              <h2 class="section-title"><span class="title-light">Consultá</span><br><span class="title-dark">tu cobertura</span></h2>
+              <p class="section-subtitle">Trabajamos con obras sociales y prepagas. Consultá la cobertura y autorización correspondiente a tu estudio.</p>
+            </div>
+            <div class="coverage-actions-wrapper">
+              <a href="https://mpimagenes.com.ar/obras-sociales/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-health"/></svg>
+                <span>Ver todas las coberturas</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Carrusel de Logos Oficiales -->
+          <div class="coverage-viewport" aria-label="Carrusel de convenios con prepagas y obras sociales">
+            <div class="coverage-track" id="coverage-track">
+              <div class="coverage-card">
+                <img src="assets/osde.webp" alt="OSDE" loading="lazy" width="120" height="40">
+              </div>
+              <div class="coverage-card">
+                <img src="assets/swiss-medical.webp" alt="Swiss Medical" loading="lazy" width="120" height="40">
+              </div>
+              <div class="coverage-card">
+                <img src="assets/omint.webp" alt="OMINT" loading="lazy" width="120" height="40">
+              </div>
+              <div class="coverage-card">
+                <img src="assets/pami.webp" alt="PAMI" loading="lazy" width="120" height="40">
+              </div>
+              <div class="coverage-card">
+                <img src="assets/osep.webp" alt="OSEP" loading="lazy" width="120" height="40">
+              </div>
+              <div class="coverage-card">
+                <img src="assets/galeno.webp" alt="Galeno" loading="lazy" width="120" height="40">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ========================================================================
          5. INSTITUCIÓN (ACERCA DE NOSOTROS)
@@ -633,7 +523,7 @@
         <!-- Encabezado de sección -->
         <div class="locations-header">
           <span class="section-tag">NUESTRAS SEDES</span>
-          <h2 class="section-title"><span class="title-light">Estamos cerca</span><br><span class="title-dark">para acompañarte mejor.</span></h2>
+          <h2 class="section-title"><span class="title-light">Estamos donde</span><br><span class="title-dark">nos necesitás</span></h2>
           <p class="section-subtitle">Elegí una sede para conocer su ubicación y los servicios que brinda.</p>
         </div>
 
@@ -643,7 +533,6 @@
           <button class="location-tab-btn" role="tab" aria-selected="false" data-sede="1" tabindex="-1">Sede 9 de Julio</button>
           <button class="location-tab-btn" role="tab" aria-selected="false" data-sede="2" tabindex="-1">Sede Av. Colón</button>
           <button class="location-tab-btn" role="tab" aria-selected="false" data-sede="3" tabindex="-1">Hospital Santa Isabel</button>
-          <button class="location-tab-btn" role="tab" aria-selected="false" data-sede="4" tabindex="-1">Hospital Privado</button>
         </div>
 
         <!-- Display interactivo de información y mapa -->
@@ -682,56 +571,23 @@
             </div>
           </div>
 
-          <!-- Mapa Google Maps Responsivo -->
-          <div class="location-map-container">
-            <iframe id="sede-map-iframe" class="location-map-iframe" src="https://maps.google.com/maps?q=Mitre+775+Ciudad+de+Mendoza+Mendoza+Argentina&t=&z=16&ie=UTF8&iwloc=&output=embed" title="Ubicación de Sede Mitre en Google Maps" loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+          <!-- Fachada de la sede + miniatura del mapa -->
+          <div class="location-media">
+            <div class="location-facade" id="sede-facade">
+              <img id="sede-facade-img" class="location-facade-img" src="assets/sedes/fachada-mitre.jpg" alt="Fachada de Sede Mitre" width="1600" height="1067" loading="lazy">
+              <div class="location-facade-placeholder" aria-hidden="true">
+                <svg class="icon"><use href="#i-pin"/></svg>
+                <span>Foto de la fachada</span>
+              </div>
+            </div>
 
-    <!-- ========================================================================
-         7. OBRAS SOCIALES Y PREPAGAS (CARRUSEL)
-         ======================================================================== -->
-    <section class="coverage-section section-padding" id="cobertura">
-      <div class="container">
-        <div class="coverage-box">
-          <div class="coverage-header">
-            <div class="coverage-header-text">
-              <span class="section-tag">OBRAS SOCIALES Y PREPAGAS</span>
-              <h2 class="section-title"><span class="title-light">Tu cobertura,</span><br><span class="title-dark">más cerca.</span></h2>
-              <p class="section-subtitle">Trabajamos con obras sociales y prepagas. Consultá la cobertura y autorización correspondiente a tu estudio.</p>
-            </div>
-            <div class="coverage-actions-wrapper">
-              <a href="https://mpimagenes.com.ar/obras-sociales/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon"><use href="#i-health"/></svg>
-                <span>Ver todas las coberturas</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Carrusel de Logos Oficiales -->
-          <div class="coverage-viewport" aria-label="Carrusel de convenios con prepagas y obras sociales">
-            <div class="coverage-track" id="coverage-track">
-              <div class="coverage-card">
-                <img src="assets/osde.webp" alt="OSDE" loading="lazy" width="120" height="40">
-              </div>
-              <div class="coverage-card">
-                <img src="assets/swiss-medical.webp" alt="Swiss Medical" loading="lazy" width="120" height="40">
-              </div>
-              <div class="coverage-card">
-                <img src="assets/omint.webp" alt="OMINT" loading="lazy" width="120" height="40">
-              </div>
-              <div class="coverage-card">
-                <img src="assets/pami.webp" alt="PAMI" loading="lazy" width="120" height="40">
-              </div>
-              <div class="coverage-card">
-                <img src="assets/osep.webp" alt="OSEP" loading="lazy" width="120" height="40">
-              </div>
-              <div class="coverage-card">
-                <img src="assets/galeno.webp" alt="Galeno" loading="lazy" width="120" height="40">
-              </div>
-            </div>
+            <a class="location-map-thumb" id="sede-map-link" href="https://www.google.com/maps/search/?api=1&query=Mitre+775+Ciudad+de+Mendoza+Mendoza+Argentina" target="_blank" rel="noopener noreferrer" aria-label="Ver Sede Mitre en Google Maps">
+              <iframe id="sede-map-iframe" class="location-map-iframe" src="https://maps.google.com/maps?q=Mitre+775+Ciudad+de+Mendoza+Mendoza+Argentina&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Mapa de ubicación de Sede Mitre" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="location-map-thumb-label">
+                <svg class="icon"><use href="#i-pin"/></svg>
+                Ver en el mapa ↗
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -744,9 +600,9 @@
       <div class="container">
         <div class="staff-header-row">
           <div class="staff-header-text">
-            <span class="section-tag">JEFES DE SERVICIO</span>
-            <h2 class="section-title"><span class="title-light">Experiencia médica.</span><br><span class="title-dark">Referentes en cada especialidad.</span></h2>
-            <p class="section-subtitle">Conocé a los profesionales que lideran nuestros servicios.</p>
+            <span class="section-tag">NUESTRO EQUIPO</span>
+            <h2 class="section-title"><span class="title-light">Especialistas</span><br><span class="title-dark">de nuestra institución</span></h2>
+            <p class="section-subtitle">Conocé a los profesionales, detrás de cada diagnóstico.</p>
           </div>
           <div class="staff-header-action">
             <a href="https://mpimagenes.com.ar/profesionales/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
@@ -805,6 +661,83 @@
     </section>
 
     <!-- ========================================================================
+         7. CONTACTO PARA PROFESIONALES (MÉDICOS DERIVANTES)
+         ======================================================================== -->
+    <section class="referrers-section" id="medicos-derivantes">
+      <div class="container">
+          <!-- ====================================================================
+               BANNER PARA MÉDICOS DERIVANTES (INFORMACIÓN Y RESPALDO)
+               ==================================================================== -->
+          <aside class="referrers-card" aria-label="Información para médicos derivantes">
+            <div class="referrers-header-row">
+              <div class="referrers-header-text">
+                <span class="section-tag">PARA MÉDICOS DERIVANTES</span>
+                <h3 class="referrers-title"><span class="title-light">Información y respaldo</span><br><span class="title-dark">para cada diagnóstico.</span></h3>
+                <p class="referrers-subtitle">Ponemos a disposición de los médicos derivantes un equipo de profesionales y servicios especializados para acompañar cada instancia del proceso diagnóstico.</p>
+              </div>
+              <div class="referrers-header-action">
+                <a href="mailto:medicinaporimagenes@mpimagenes.com.ar?subject=Consulta%20Profesional%20-%20M%C3%A9dico%20Derivante" class="btn btn-primary" aria-label="Contacto para profesionales">
+                  <svg class="icon"><use href="#i-mail"/></svg>
+                  <span>Contacto para profesionales</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="referrers-grid">
+              <!-- 1. Tecnología de avanzada -->
+              <div class="referrers-feature-item">
+                <div class="referrers-icon-wrapper">
+                  <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="13" cy="15" r="10" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(0, 207, 255, 0.08)"/>
+                    <circle cx="13" cy="15" r="5" stroke="var(--blue-btn-icon, #0F52B5)" stroke-width="2"/>
+                    <circle cx="13" cy="15" r="2" fill="var(--cyan-accent)"/>
+                    <path d="M11 19.5h16a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H11" stroke="var(--blue-btn-icon, #0F52B5)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M24 23.5v4.5M16 23.5v4.5" stroke="var(--cyan-accent)" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="referrers-feature-text">
+                  <h4 class="referrers-feature-title">Tecnología de avanzada</h4>
+                  <p class="referrers-feature-desc">Equipamiento de vanguardia para estudios de diagnóstico por imágenes.</p>
+                </div>
+              </div>
+
+              <!-- 2. Criterio médico -->
+              <div class="referrers-feature-item">
+                <div class="referrers-icon-wrapper">
+                  <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 3H8a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V10l-7-7z" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(0, 207, 255, 0.08)"/>
+                    <path d="M20 3v7h7" stroke="var(--blue-btn-icon, #0F52B5)" stroke-width="2"/>
+                    <path d="M16 14v6M13 17h6" stroke="var(--blue-btn-icon, #0F52B5)" stroke-width="2.2" stroke-linecap="round"/>
+                    <path d="M10 23h12" stroke="var(--cyan-accent)" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="referrers-feature-text">
+                  <h4 class="referrers-feature-title">Criterio médico</h4>
+                  <p class="referrers-feature-desc">Experiencia profesional para acompañar cada estudio y diagnóstico.</p>
+                </div>
+              </div>
+
+              <!-- 3. Canal para profesionales -->
+              <div class="referrers-feature-item">
+                <div class="referrers-icon-wrapper">
+                  <svg class="referrers-feature-icon" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="4" y="6" width="24" height="19" rx="3.5" stroke="var(--cyan-accent)" stroke-width="2" fill="rgba(0, 207, 255, 0.08)"/>
+                    <path d="M4.5 7.5L16 16.5l11.5-9" stroke="var(--blue-btn-icon, #0F52B5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="16" cy="16.5" r="2" fill="var(--cyan-accent)"/>
+                    <path d="M9 20h4M19 20h4" stroke="var(--blue-btn-icon, #0F52B5)" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="referrers-feature-text">
+                  <h4 class="referrers-feature-title">Canal para profesionales</h4>
+                  <p class="referrers-feature-desc">Contacto directo entre médicos para solicitar estudios, consultar informes e intercambiar información.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+      </div>
+    </section>
+
+    <!-- ========================================================================
          9. BANNER DE MISIÓN - ESTÉTICA TECNOLÓGICA
          ======================================================================== -->
     <section class="brand-pattern-banner" aria-label="Misión institucional">
@@ -812,10 +745,10 @@
       <div class="tech-banner-glow" aria-hidden="true"></div>
 
       <div class="container tech-banner-container">
-        <span class="tech-banner-tag">TU SALUD, NUESTRA MISIÓN</span>
+        <span class="tech-banner-tag">MÁS PRECISIÓN, MEJOR DIAGNÓSTICO</span>
         <h2 class="tech-banner-title">
-          La tecnología nos permite <span class="tech-line-accent">ver</span>.<br>
-          La experiencia nos permite <span class="tech-line-accent">cuidar</span>.
+          <span class="tech-title-line">La <span class="tech-line-accent">precisión tecnológica</span> y el <span class="tech-line-accent">criterio médico</span>,</span>
+          <span class="tech-title-line">dos pilares del diagnóstico.</span>
         </h2>
         <div class="tech-banner-action">
           <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20solicitar%20un%20turno." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
@@ -833,8 +766,8 @@
       <div class="container">
         <div class="faq-grid">
           <div class="faq-sticky-intro">
-            <span class="section-tag">ANTES DE TU VISITA</span>
-            <h2 class="section-title"><span class="title-light">Todo más claro.</span><br><span class="title-dark">Desde el primer paso.</span></h2>
+            <span class="section-tag">PREGUNTAS FRECUENTES</span>
+            <h2 class="section-title"><span class="title-light">Lo que necesitás saber,</span><br><span class="title-dark">antes de tu consulta</span></h2>
             <p class="section-subtitle">Te orientamos para que puedas organizar tu estudio con tranquilidad.</p>
           </div>
 
@@ -892,26 +825,109 @@
          ======================================================================== -->
     <section class="gallery-section" id="galeria" aria-label="Galería de instalaciones y tecnología">
       <div class="container">
-        <div class="gallery-shapes-grid">
-          <!-- 1. Cápsula / Stadium -->
-          <div class="gallery-shape-card shape-pill">
-            <img src="assets/gallery-1-opt.jpg" alt="Instalaciones de Medicina por Imágenes" class="gallery-shape-img" loading="lazy" width="600" height="800">
+        <div class="gallery-carousel">
+          <div class="gallery-track" id="gallery-track" tabindex="0" aria-label="Fotos de nuestras instalaciones. Deslizá para ver más.">
+            <!-- 1. Cápsula / Stadium -->
+            <div class="gallery-shape-card shape-pill">
+              <img src="assets/gallery-1-opt.jpg" alt="Instalaciones de Medicina por Imágenes" class="gallery-shape-img" loading="lazy" width="600" height="800">
+            </div>
+
+            <!-- 2. Arco -->
+            <div class="gallery-shape-card shape-arch">
+              <img src="assets/gallery-2-opt.jpg" alt="Equipamiento de diagnóstico médico" class="gallery-shape-img" loading="lazy" width="600" height="800">
+            </div>
+
+            <!-- 3. Esquina redondeada -->
+            <div class="gallery-shape-card shape-corner">
+              <img src="assets/gallery-3-opt.jpg" alt="Atención médica y tecnología" class="gallery-shape-img" loading="lazy" width="600" height="800">
+            </div>
+
+            <!-- 4. Arco con tinte cyan -->
+            <div class="gallery-shape-card shape-arch-tint">
+              <img src="assets/gallery-4-opt.jpg" alt="Equipo profesional de Medicina por Imágenes" class="gallery-shape-img" loading="lazy" width="600" height="800">
+            </div>
+          </div>
+          <div class="gallery-controls">
+            <button type="button" class="gallery-arrow-btn" id="gallery-prev" aria-label="Fotos anteriores">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="gallery-arrow-btn" id="gallery-next" aria-label="Fotos siguientes">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         11. FORMULARIO DE CONTACTO
+         ======================================================================== -->
+    <section class="contact-form-section section-padding" id="contacto">
+      <div class="container">
+        <div class="contact-form-grid">
+          <div class="contact-form-intro">
+            <span class="section-tag">CONTACTO</span>
+            <h2 class="section-title"><span class="title-light">¿Tenés una consulta?</span><br><span class="title-dark">Escribinos.</span></h2>
+            <p class="section-subtitle">Dejanos tus datos y el motivo de tu consulta. Nuestro equipo te va a responder a la brevedad.</p>
+
+            <ul class="contact-form-info">
+              <li>
+                <svg class="icon"><use href="#i-chat"/></svg>
+                <div>
+                  <a href="https://wa.me/5492615117290" target="_blank" rel="noopener noreferrer">WhatsApp: 261 511 7290</a>
+                  <span>Solo mensajes.</span>
+                </div>
+              </li>
+              <li>
+                <svg class="icon"><use href="#i-mail"/></svg>
+                <div>
+                  <a href="mailto:medicinaporimagenes@mpimagenes.com.ar">medicinaporimagenes@mpimagenes.com.ar</a>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          <!-- 2. Arco -->
-          <div class="gallery-shape-card shape-arch">
-            <img src="assets/gallery-2-opt.jpg" alt="Equipamiento de diagnóstico médico" class="gallery-shape-img" loading="lazy" width="600" height="800">
-          </div>
-
-          <!-- 3. Esquina redondeada -->
-          <div class="gallery-shape-card shape-corner">
-            <img src="assets/gallery-3-opt.jpg" alt="Atención médica y tecnología" class="gallery-shape-img" loading="lazy" width="600" height="800">
-          </div>
-
-          <!-- 4. Arco con tinte cyan -->
-          <div class="gallery-shape-card shape-arch-tint">
-            <img src="assets/gallery-4-opt.jpg" alt="Equipo profesional de Medicina por Imágenes" class="gallery-shape-img" loading="lazy" width="600" height="800">
-          </div>
+          <form class="contact-form-card" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-nombre">Nombre y apellido</label>
+                <input type="text" id="cf-nombre" name="nombre" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="cf-telefono">Teléfono</label>
+                <input type="tel" id="cf-telefono" name="telefono" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" autocomplete="email">
+              </div>
+              <div class="form-field">
+                <label for="cf-motivo">Motivo de consulta</label>
+                <select id="cf-motivo" name="motivo" required>
+                  <option value="" disabled selected>Seleccioná una opción</option>
+                  <option>Solicitar turno</option>
+                  <option>Consulta sobre un estudio</option>
+                  <option>Obras sociales y prepagas</option>
+                  <option>Resultados</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cf-mensaje">Mensaje</label>
+              <textarea id="cf-mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            <p class="form-error" id="contact-form-error" role="alert" hidden>Completá nombre, teléfono, motivo y mensaje para continuar.</p>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                <svg class="icon"><use href="#i-chat"/></svg>
+                <span>Enviar consulta</span>
+              </button>
+              <p class="form-note">Se abrirá WhatsApp con tu consulta lista para enviar.</p>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -919,12 +935,12 @@
     <!-- ========================================================================
          12. CONTACTO / CIERRE (BANNER AZUL PROFUNDO)
          ======================================================================== -->
-    <section class="closing-cta-section" id="contacto" aria-label="Contacto para turnos">
+    <section class="closing-cta-section" id="cierre" aria-label="Contacto para turnos">
       <div class="closing-bg-glow" aria-hidden="true"></div>
       <div class="container">
         <div class="closing-cta-card">
           <span class="section-tag light">TU SALUD, NUESTRA MISIÓN</span>
-          <h2>El primer paso es simple.<br>Estamos para acompañarte.</h2>
+          <h2>El primer paso es simple.<br>Hacé tu consulta hoy.</h2>
           <p>Consultá por tu estudio, cobertura o sede. Nuestro equipo te orientará para solicitar tu turno.</p>
           <a href="https://wa.me/5492615117290?text=Hola,%20quisiera%20consultar%20por%20un%20estudio,%20cobertura%20o%20sede." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
             <svg class="icon"><use href="#i-chat"/></svg>
@@ -945,7 +961,7 @@
 
         <!-- Columna 1: Marca y Redes -->
         <div class="footer-brand-col">
-          <img src="assets/logo-footer.png" alt="Medicina por Imágenes" class="footer-logo-img" width="220" height="53" loading="lazy">
+          <img src="assets/logo-footer.png" alt="Medicina por Imágenes" class="footer-logo-img" width="258" height="48" loading="lazy">
           <p class="footer-brand-desc">Tecnología, experiencia médica y calidad humana al servicio de tu salud.</p>
           <div class="footer-social-links">
             <a href="https://www.instagram.com/medicinaporimagenes/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram">

@@ -58,14 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Apertura automática de acordeón de servicio al hacer clic en submenú
+  // Al elegir un servicio en el submenú, se abre su detalle
   const bindServiceAccordionTrigger = (href, serviceId) => {
     document.querySelectorAll(`a[href="${href}"]`).forEach(link => {
       link.addEventListener('click', () => {
-        const targetService = document.getElementById(serviceId);
-        if (targetService) {
-          targetService.open = true;
-        }
+        const trigger = document.querySelector(`#${serviceId} .service-card-trigger`);
+        if (trigger) setTimeout(() => trigger.click(), 450);
       });
     });
   };
@@ -102,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnSecText: 'Conocé el servicio',
       btnSecLink: '#servicios',
       serviceQueryId: 1,
-      location: 'Hospital Privado de Mendoza · Santa Isabel de Hungría',
+      location: 'Av. Colón 350/352',
       phone: 'WhatsApp: 261 511 7290',
       phoneLink: 'https://wa.me/5492615117290',
       image: 'assets/hero-hemodinamia.webp',
@@ -231,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Resonancia Magnética',
       guardia: null,
       locations: 'Mitre 775 · Ciudad de Mendoza',
-      description: 'Tecnología avanzada al servicio del diagnóstico médico.',
+      description: 'Servicio de resonancia magnética en nuestra sede de Mitre 775, Ciudad de Mendoza. Consultá por tu estudio y su preparación al solicitar el turno.',
       image: 'assets/service-resonancia.webp',
       alt: 'Resonador magnético de Medicina por Imágenes'
     },
@@ -239,8 +237,8 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 1,
       name: 'Hemodinamia',
       guardia: 'Guardia pasiva',
-      locations: 'Hospital Privado de Mendoza · Hospital Santa Isabel de Hungría',
-      description: 'Cardiología intervencionista, electrofisiología y neurointervencionismo.',
+      locations: 'Av. Colón 350/352',
+      description: 'Cardiología intervencionista, electrofisiología y neurointervencionismo, con tecnología angiográfica y criterio médico. Guardia pasiva.',
       image: 'assets/service-hemodinamia.webp',
       alt: 'Sala de hemodinamia y angiógrafo'
     },
@@ -249,16 +247,16 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Tomografía',
       guardia: 'Guardia activa 24 hs.',
       locations: 'Clínica Santa María · Av. Colón 350/352, Ciudad de Mendoza',
-      description: 'Estudios por imágenes con acompañamiento y criterio médico.',
+      description: 'Estudios tomográficos de alta resolución con supervisión y criterio médico. Guardia activa 24 hs. Consultá la preparación y cobertura correspondiente.',
       image: 'assets/service-tomografia.webp',
       alt: 'Tomógrafo computado de última generación'
     },
     {
       id: 3,
-      name: 'Eco Doppler Color',
+      name: 'Ecografía y Eco Doppler',
       guardia: null,
       locations: '9 de Julio 716, primer piso · Av. Colón 350/352, Ciudad de Mendoza',
-      description: 'Consultá por tu estudio, disponibilidad y requisitos.',
+      description: 'Estudios ecográficos y mapeo vascular Doppler. Consultá por disponibilidad, requisitos y preparación antes de tu turno.',
       image: 'assets/service-ecografia.webp',
       alt: 'Ecógrafo y tecnología doppler'
     },
@@ -267,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Radiología Digital',
       guardia: null,
       locations: '9 de Julio 716, primer piso · Av. Colón 350/352, Ciudad de Mendoza',
-      description: 'Servicio de diagnóstico radiológico.',
+      description: 'Radiología digital de alta resolución, directa y contrastada. Consultá requisitos y orden médica al solicitar el turno.',
       image: 'assets/service-radiologia.webp',
       alt: 'Equipo de radiología digital'
     },
@@ -276,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Ecografía',
       guardia: null,
       locations: '9 de Julio 716, primer piso · Ciudad de Mendoza',
-      description: 'Estudios ecográficos con atención médica cercana.',
+      description: 'Diagnóstico ecográfico general y especializado con atención médica cercana y equipamiento moderno.',
       image: 'assets/service-ecografia.webp',
       alt: 'Equipo de ecografía diagnóstica'
     },
@@ -285,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Punciones Guiadas por Ecografía',
       guardia: null,
       locations: '9 de Julio 716, primer piso · Ciudad de Mendoza',
-      description: 'Procedimientos guiados por ecografía según la indicación médica.',
+      description: 'Punciones tiroideas, prostáticas y mamarias guiadas con precisión ecográfica. Coordiná los requisitos previos con nuestro equipo.',
       image: 'assets/service-ecografia.webp',
       alt: 'Procedimiento de punción guiada por ecografía'
     },
@@ -294,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Ecocardiografía',
       guardia: null,
       locations: '9 de Julio 716, primer piso · Ciudad de Mendoza',
-      description: 'Estudios ecocardiográficos. Consultá turnos y requisitos.',
+      description: 'Evaluación ecocardiográfica de la estructura y dinámica cardiovascular con tecnología de alta precisión.',
       image: 'assets/service-ecografia.webp',
       alt: 'Ecocardiografía cardiovascular'
     },
@@ -303,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Punciones Biopsia Guiada por Tomografía',
       guardia: null,
       locations: 'Av. Colón 350/352 · Ciudad de Mendoza',
-      description: 'Procedimientos guiados por tomografía según la indicación médica.',
+      description: 'Procedimientos intervencionistas de alta precisión anatómica guiados por tomografía según la derivación de tu médico tratante.',
       image: 'assets/service-tomografia.webp',
       alt: 'Punción biopsia guiada por tomografía'
     },
@@ -312,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Mamografía Digital',
       guardia: null,
       locations: 'Colón 775 · 9 de Julio 716, Ciudad de Mendoza',
-      description: 'Estudios de diagnóstico mamario. Consultá cobertura y disponibilidad.',
+      description: 'Estudios de diagnóstico y control mamario con tecnología digital directa. Consultá cobertura y requisitos al solicitar tu turno.',
       image: 'assets/service-mamografia.webp',
       alt: 'Mamógrafo digital'
     }
@@ -405,6 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Sede Mitre',
       address: 'Mitre 775 · Ciudad de Mendoza',
       mapQuery: 'Mitre 775 Ciudad de Mendoza Mendoza Argentina',
+      facade: 'assets/sedes/fachada-mitre.jpg',
       services: ['Resonancia Magnética', 'Tomografía', 'Ecografía', 'Eco Doppler Color', 'Mamografía Digital', 'Punciones guiadas', 'Bloqueos por dolor'],
       note: 'Consultá la disponibilidad de tu estudio y los horarios de la sede al solicitar el turno.'
     },
@@ -413,6 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Sede 9 de Julio',
       address: '9 de Julio 716, primer piso · Ciudad de Mendoza',
       mapQuery: '9 de Julio 716 Ciudad de Mendoza Mendoza Argentina',
+      facade: 'assets/sedes/fachada-9-de-julio.jpg',
       services: ['Eco Doppler Color', 'Radiología Digital', 'Ecografía', 'Punciones Guiadas por Ecografía', 'Ecocardiografía', 'Mamografía Digital', 'Panorámicas dentales'],
       note: 'Consultá la disponibilidad de tu estudio y los horarios de la sede al solicitar el turno.'
     },
@@ -421,7 +421,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Sede Av. Colón',
       address: 'Av. Colón 350/352 · Ciudad de Mendoza',
       mapQuery: 'Av Colon 350 Ciudad de Mendoza Mendoza Argentina',
-      services: ['Hemodinamia', 'Tomografía (Clínica Santa María)', 'Eco Doppler Color', 'Radiología Digital', 'Punciones Biopsia por Tomografía'],
+      facade: 'assets/sedes/fachada-colon.jpg',
+      services: ['Hemodinamia', 'Cardiología Intervencionista', 'Electrofisiología', 'Neurointervencionismo', 'Tomografía (Clínica Santa María)', 'Eco Doppler Color', 'Radiología Digital', 'Punciones Biopsia por Tomografía'],
       note: 'Consultá la disponibilidad de tu estudio y los horarios de la sede al solicitar el turno.'
     },
     {
@@ -429,15 +430,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Hospital Santa Isabel de Hungría',
       address: 'Pedro del Castillo 2854 · Guaymallén, Mendoza',
       mapQuery: 'Hospital Santa Isabel de Hungria Pedro del Castillo 2854 Guaymallen Mendoza Argentina',
+      facade: 'assets/sedes/fachada-santa-isabel.jpg',
       services: ['Hemodinamia', 'Cardiología Intervencionista', 'Electrofisiología', 'Neurointervencionismo'],
-      note: 'Consultá la disponibilidad de tu estudio y los horarios de la sede al solicitar el turno.'
-    },
-    {
-      id: 4,
-      name: 'Hospital Privado',
-      address: 'Mitre 667 · Ciudad de Mendoza',
-      mapQuery: 'Hospital Privado Mitre 667 Ciudad de Mendoza Mendoza Argentina',
-      services: ['Hemodinamia', 'Cardiología Intervencionista'],
       note: 'Consultá la disponibilidad de tu estudio y los horarios de la sede al solicitar el turno.'
     }
   ];
@@ -450,6 +444,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const sedeMapIframe = document.getElementById('sede-map-iframe');
   const sedeDirectionsBtn = document.getElementById('sede-directions-btn');
   const sedeTurnBtn = document.getElementById('sede-turn-btn');
+  const sedeMapLink = document.getElementById('sede-map-link');
+  const sedeFacade = document.getElementById('sede-facade');
+  const sedeFacadeImg = document.getElementById('sede-facade-img');
+
+  // Si la foto de la fachada todavía no existe, se muestra un marcador de posición
+  if (sedeFacade && sedeFacadeImg) {
+    const markFacade = () => sedeFacade.classList.toggle('is-empty', !(sedeFacadeImg.complete && sedeFacadeImg.naturalWidth > 0));
+    sedeFacadeImg.addEventListener('load', markFacade);
+    sedeFacadeImg.addEventListener('error', () => sedeFacade.classList.add('is-empty'));
+    if (sedeFacadeImg.complete) markFacade();
+  }
 
   const updateSede = (index) => {
     const s = sedesData[index];
@@ -477,12 +482,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const encodedMap = encodeURIComponent(s.mapQuery);
     if (sedeMapIframe) {
-      sedeMapIframe.src = `https://maps.google.com/maps?q=${encodedMap}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+      sedeMapIframe.src = `https://maps.google.com/maps?q=${encodedMap}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
       sedeMapIframe.title = `Mapa de ubicación de ${s.name}`;
     }
 
-    if (sedeDirectionsBtn) {
-      sedeDirectionsBtn.href = `https://www.google.com/maps/search/?api=1&query=${encodedMap}`;
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedMap}`;
+    if (sedeDirectionsBtn) sedeDirectionsBtn.href = mapsUrl;
+    if (sedeMapLink) {
+      sedeMapLink.href = mapsUrl;
+      sedeMapLink.setAttribute('aria-label', `Ver ${s.name} en Google Maps`);
+    }
+
+    if (sedeFacade && sedeFacadeImg && s.facade) {
+      sedeFacade.classList.remove('is-empty');
+      sedeFacadeImg.alt = `Fachada de ${s.name}`;
+      sedeFacadeImg.src = s.facade;
     }
 
     if (sedeTurnBtn) {
@@ -575,4 +589,65 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* ==========================================================================
+     7. Formulario de contacto: arma el mensaje y abre WhatsApp
+     ========================================================================== */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    const errorBox = document.getElementById('contact-form-error');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fields = ['nombre', 'telefono', 'motivo', 'mensaje'].map(n => contactForm.elements[n]);
+      let valid = true;
+      fields.forEach(f => {
+        const ok = f.value.trim() !== '';
+        f.setAttribute('aria-invalid', ok ? 'false' : 'true');
+        if (!ok) valid = false;
+      });
+      errorBox.hidden = valid;
+      if (!valid) {
+        fields.find(f => f.getAttribute('aria-invalid') === 'true').focus();
+        return;
+      }
+      const d = contactForm.elements;
+      const lines = [
+        'Hola, quisiera hacer una consulta.',
+        'Nombre: ' + d.nombre.value.trim(),
+        'Teléfono: ' + d.telefono.value.trim(),
+        d.email.value.trim() ? 'Email: ' + d.email.value.trim() : null,
+        'Motivo: ' + d.motivo.value,
+        'Mensaje: ' + d.mensaje.value.trim()
+      ].filter(Boolean);
+      window.open('https://wa.me/5492615117290?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    });
+  }
+
+  /* ==========================================================================
+     8. Carrusel de la galería de fotos
+     ========================================================================== */
+  const galleryTrack = document.getElementById('gallery-track');
+  if (galleryTrack) {
+    const galPrev = document.getElementById('gallery-prev');
+    const galNext = document.getElementById('gallery-next');
+    const galStep = () => {
+      const card = galleryTrack.querySelector('.gallery-shape-card');
+      const gap = parseFloat(getComputedStyle(galleryTrack).columnGap) || 0;
+      return card ? card.getBoundingClientRect().width + gap : galleryTrack.clientWidth;
+    };
+    const galUpdate = () => {
+      const max = galleryTrack.scrollWidth - galleryTrack.clientWidth - 2;
+      galPrev.disabled = galleryTrack.scrollLeft <= 2;
+      galNext.disabled = galleryTrack.scrollLeft >= max;
+    };
+    galPrev.addEventListener('click', () => galleryTrack.scrollBy({ left: -galStep(), behavior: 'smooth' }));
+    galNext.addEventListener('click', () => galleryTrack.scrollBy({ left: galStep(), behavior: 'smooth' }));
+    galleryTrack.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); galNext.click(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); galPrev.click(); }
+    });
+    galleryTrack.addEventListener('scroll', galUpdate, { passive: true });
+    window.addEventListener('resize', galUpdate);
+    galUpdate();
+  }
 });
